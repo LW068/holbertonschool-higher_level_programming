@@ -2,8 +2,8 @@
 
 
 def fizzbuzz():
-printtext = ""
-for i in range(1, 101):
+    printtext = ""
+    for i in range(1, 101):
         printtext = ""
         if (i % 3 == 0):
             printtext += "Fizz"
