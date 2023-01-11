@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def uppercase(str):
     capsDiff = ord('A') - ord('a')
     l_str = list(str)
