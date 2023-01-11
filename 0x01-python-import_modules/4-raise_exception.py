@@ -3,6 +3,3 @@
 
 def raise_exception(a, b):
     raise TypeError()
-Footer
-
-
