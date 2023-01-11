@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 
-de pow(a, b):
+def pow(a, b):
     return (a ** b)
