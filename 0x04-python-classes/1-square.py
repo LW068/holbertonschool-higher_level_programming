@@ -1,4 +1,10 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    new_list = list(map(lambda x: replace if x == search else x, my_list))
-    return (new_list)
+class Square:
+    """Class Square that defines a square object
+    """
+    def __init__(self, size):
+        """Initialize method that stores the size of the square
+        Args:
+            param1 (int): size of the square
+        """
+        self.__size = size
