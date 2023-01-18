@@ -1,9 +1,29 @@
 #!/usr/bin/python3
-def uniq_add(my_list=[]):
-    uniq_list = set(my_list)
-    num = 0
+"""Simple Square Project
+This Module contains a class representing a simple Square.
+Example:
+    >>>square = __import__('1-square').Square
+    >>>new_square = square(2)
+"""
 
-    for i in uniq_list:
-        num += i
 
-    return (num)
+class Square:
+    """Class representing a simple square
+    """
+    def __init__(self, _size=0):
+        """Initialize a simple Square
+        Args:
+            _size (int): Size of the Square.
+        """
+        if (not isinstance(_size, int)):
+            raise TypeError("size must be an integer")
+        if _size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = _size
+
+    def area(self) -> int:
+        """Get Area of a Square
+        Returns:
+            Area of Square
+        """
+        return self.__size ** 2
