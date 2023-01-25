@@ -48,4 +48,4 @@ class Rectangle:
         return myStr
 
     def __repr__(self):
-        return "Rectangle({0}, {1})".format(self.width, self.height)i
+        return "Rectangle({0}, {1})".format(self.width, self.height)
