@@ -1,20 +1,26 @@
 #!/usr/bin/python3
-class BaseGeometry:
-    """ Class that defines the attributes of Geometric Shapes """
+"""
+This is the add_item module
+The add_item module adds all arguments
+to a Python list, and then save them to a file
+"""
 
-    def area(self):
-        """ Method that defines the area of a geomtric shape """
 
-        raise Exception("area() is not implemented")
+import sys
+import json
 
-    def integer_validator(self, name, value):
-        """ Method that recieves the value property
-        Árgs:
-            name: name of the object
-            value: value of the property
-        """
 
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+
+
+filename = "add_item.json"
+try:
+    items = load_from_json_file(filename)
+except FileNotFoundError:
+    items = []
+
+for arg in sys.argv[1:]:
+    items.append(arg)
+
+save_to_json_file(items, filename)
