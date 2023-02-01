@@ -8,4 +8,7 @@ def lookup(obj):
         List of attributes
     """
 
-    return dir(obj)
+  	alist = list(obj.__dict__.keys())
+	alist.extend(x for x in dir(obj) if x not in alist)
+	alist.sort()
+	return alist 
