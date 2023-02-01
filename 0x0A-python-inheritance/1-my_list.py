@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+"""
+This is the my_list class and print_sorted module
+"""
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+
+class MyList(list):
+    """ MyList class that extends `list` """
+    def __init__(self):
+        super().__init__()
+
+    def print_sorted(self):
+        """ Prints list in ascending order """
+        print(sorted(self))
