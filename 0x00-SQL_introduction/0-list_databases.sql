@@ -1,1 +1,2 @@
+# Shows databses.
 SHOW DATABASES;
