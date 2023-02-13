@@ -1,2 +1,2 @@
-# Shows databses.
+-- Shows databses.
 SHOW DATABASES;
