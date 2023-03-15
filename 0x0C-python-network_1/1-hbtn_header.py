@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """ fetch url """
 
-#!/usr/bin/python3
-""" fetch url """
-
 import urllib.request
 import sys
 
