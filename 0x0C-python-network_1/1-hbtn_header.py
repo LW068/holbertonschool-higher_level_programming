@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """ fetch url """
 
+#!/usr/bin/python3
+""" fetch url """
+
 import urllib.request
 import sys
 
@@ -9,7 +12,4 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as response:
         header = response.info()
         x_request_id = header.get('X-Request-Id')
-        if x_request_id is not None:
-            print(x_request_id)
-        else:
-            print("")
+        print(x_request_id)
